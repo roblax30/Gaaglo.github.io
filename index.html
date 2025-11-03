@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Erreur — Contact</title>
+  <style>
+    /* Style simple, propre et non associé à aucune marque */
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#1f2937;
+      --shadow: 0 8px 24px rgba(20,20,30,0.08);
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#f6f7fb 0%, #eef2f6 100%);color:var(--accent)}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:48px}
+    .card{
+      width:100%;max-width:780px;background:var(--card);border-radius:12px;padding:36px;box-shadow:var(--shadow);border:1px solid rgba(20,20,30,0.04);
+    }
+    .badge{
+      display:inline-block;padding:6px 10px;border-radius:999px;font-size:13px;background:linear-gradient(90deg,#fff,#fafbff);border:1px solid rgba(20,20,30,0.04);color:var(--muted);
+      margin-bottom:18px;
+    }
+    h1{margin:6px 0 8px;font-size:28px;letter-spacing:-0.3px}
+    p.lead{margin:0 0 18px;color:var(--muted);line-height:1.5}
+    .code{
+      display:inline-block;background:var(--bg);padding:10px 14px;border-radius:8px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+      border:1px solid rgba(20,20,30,0.03);color:#0f172a;margin-top:10px;
+    }
+    .actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;
+      border:1px solid rgba(20,20,30,0.06);
+    }
+    .btn-primary{background:linear-gradient(180deg,#111827,#0b1220);color:#fff}
+    .btn-ghost{background:transparent;color:var(--accent)}
+    .notice{margin-top:22px;padding:12px;border-radius:10px;background:linear-gradient(90deg,#fff8e6,#fffdf8);border:1px solid rgba(250,200,60,0.12);color:#6b4f00}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:520px){.card{padding:20px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" role="main" aria-labelledby="title">
+      <span class="badge">Page non officielle • Mockup</span>
+      <h1 id="title">Une erreur est survenue</h1>
+      <p class="lead">Nous n'avons pas pu traiter votre demande. Si tu as besoin d'aide, contacte notre équipe sur Discord.</p>
+
+      <div>
+        <div class="code" aria-hidden="true">Discord : <strong>@google.off</strong></div>
+      </div>
+
+      <div class="actions" role="group" aria-label="Actions">
+        <a class="btn btn-primary" href="https://discord.com" target="_blank" rel="noopener">Ouvrir Discord</a>
+        <a class="btn btn-ghost" href="#" onclick="location.reload();return false;">Réessayer</a>
+      </div>
+
+      <div class="notice" role="note">
+        <strong>Important :</strong> ceci est une page <em>non officielle</em> créée à titre de maquette. Elle ne représente pas une page officielle d'un service existant.
+      </div>
+
+      <footer>
+        Code d'erreur : <span style="font-family:monospace">ERR-MOCK-001</span> — Si tu fournis des détails (capture d'écran / étapes), l'équipe Discord pourra t'aider plus vite.
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
